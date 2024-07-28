@@ -2,6 +2,6 @@
 #include <stdio.h>
 int main(void)
 {
-    printf("C言語は習うより慣れよ!わっはっは\n");
+    printf("Hello World!\n");
     return 0;
 }
