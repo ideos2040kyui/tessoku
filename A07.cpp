@@ -5,14 +5,17 @@ using namespace std;
 int main(){
     int D, N;
     cin >> D >> N;
-    int answer[D] = {0};
+    int answer[D+2] = {};
     int L, R;
     for (int i=0; i<N; i++){
         cin >> L >> R;
-        for (int j=L; j<=R; j++){
-            answer[j-1]++;
-        }
+        answer[L] += 1;
+        answer[R+1] += -1;
     }
-    for (int i=0; i<D; i++) cout << answer[i] << endl;
+    int sum=0;
+    for (int i=1; i<=D; i++){
+        sum += answer[i];
+        cout << sum << endl;
+    }
     return 0;
 }
